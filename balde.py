@@ -25,11 +25,11 @@ class Balde:
         quantidade_restante = outro_balde.__capacidade - outro_balde.__quantidade
         
         if quantidade_restante > self.__quantidade:
-            outro_balde.__quantidade += self.__quantidade
+            outro_balde.__quantidade = outro_balde.__quantidade + self.__quantidade
             self.__quantidade = 0
         else:
             outro_balde.__quantidade = outro_balde.__capacidade
-            self.__quantidade -= quantidade_restante
+            self.__quantidade = self.__quantidade - quantidade_restante
 
     def receba_de(self, outro_balde):
         outro_balde.derrame_em(self)
